@@ -1,5 +1,5 @@
 # 1. 클래스 이름을 정하기
-class (Lyricsmanager):
+class Lyricsmanager:
 
     # 2. __init__으로 초기화하기
     # 클래스가 탄생할 때 '어떤 파일'을 관리할지 미리 알려주는 설정 단계
@@ -36,3 +36,10 @@ class (Lyricsmanager):
         else:
             print(f"에러: {index}번 줄은 존재하지 않습니다. (현재 총 {len(lines)}줄)")
 
+# --- 여기서부터는 상자를 실제로 사용하는 곳 ---
+
+# 6. 위에서 만든 클래스로 '진짜 물건(객체)'을 하나 만들기
+manager = Lyricsmanager("Lyrics.txt")
+
+# 7. 이제 점(.)을 찍어서 메서드를 실행해보기
+manager.write_new("반짝반짝 작은 별")
