@@ -13,7 +13,7 @@ class (Lyricsmanager):
             f.write(text)
 
     # 4. read 부분. 가사를 읽어오는 '메서드' 만들기
-    def lyrics_read(self,text):
+    def lyrics_read(self):
         # 여기에 'r' 모드 코드를 넣어 보기
         with open(self.filename, "r", encoding="utf-8") as f:
             return f.read()
