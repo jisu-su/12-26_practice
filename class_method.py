@@ -26,6 +26,13 @@ class (Lyricsmanager):
         # 3. 다시 쓰기 (writelines)
         with open(self.filename, "r", encoding="utf-8") as f:
             lines = f.readlines()
-        del lines[index]
-        with open(self.filename, "w", encoding="utf-8") as f:
-            f.writelines(lines)
+        # 안정장치 만들어 보기
+        # 안전장치: index가 리스트의 범위 안에 있는지 확인한다.
+        if 0 <= index < len(lines):
+            del lines[index]
+            with open(self.filename, "w", encoding="utf-8") as f:
+                f.writelines(lines)
+            print(f"{index}번 줄을 성공적으로 삭제했습니다.")
+        else:
+            print(f"에러: {index}번 줄은 존재하지 않습니다. (현재 총 {len(lines)}줄)")
+
