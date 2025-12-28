@@ -42,4 +42,5 @@ class Lyricsmanager:
 manager = Lyricsmanager("Lyrics.txt")
 
 # 7. 이제 점(.)을 찍어서 메서드를 실행해보기
-manager.write_new("반짝반짝 작은 별")
+manager.lyrics_write("반짝반짝 작은 별")
+print(manager.lyrics_read())
