@@ -26,6 +26,6 @@ class (Lyricsmanager):
         # 3. 다시 쓰기 (writelines)
         with open(self.filename, "r", encoding="utf-8") as f:
             lines = f.readlines()
-            del lines[index]
-            with open(self.filename, "w", encoding="utf-8") as f2:
-                f2.writelines(lines)
+        del lines[index]
+        with open(self.filename, "w", encoding="utf-8") as f:
+            f.writelines(lines)
